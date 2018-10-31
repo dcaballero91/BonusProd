@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Bajando Pagina
+      shell: /etc/ansible/BonusProd/pag_mantenimiento_down.sh 
+    - name: Notificacion Telegram 
+      shell: /etc/ansible/BonusProd/smsDOWN.sh
+    - name: Notificacion SMS
+      shell: /etc/ansible/BonusProd/notificacionLoteDown.sh
+   

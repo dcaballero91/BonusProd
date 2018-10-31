@@ -1,0 +1,46 @@
+---
+- hosts: ContiJbossESBTRA
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-eap-rhel start
+      ignore_errors: True
+- hosts: ContiJbossGX
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
+- hosts: ContiJbossArchivos
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
+- hosts: ContiJbossBC
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
+- hosts: ContiJbossTrans
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
+- hosts: ContiJbossWeb
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-as-standalone start
+      ignore_errors: True
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Subiendo Pagina
+      shell: /etc/ansible/BonusConti/pag_mantenimiento_up.sh
+    - name: Notificacion Telegram
+      shell: /etc/ansible/BonusConti/smsUP.sh
+    - name: Notificacino SMS
+      shell: /etc/ansible/BonusConti/notificacionLoteUp.sh

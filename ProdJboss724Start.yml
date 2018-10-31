@@ -1,0 +1,8 @@
+---
+- hosts: JbossStandalone724
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started

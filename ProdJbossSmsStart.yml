@@ -1,0 +1,17 @@
+---
+- hosts: JbossStandaloneSms
+  remote_user: root
+  tasks:
+    - name: Start service Jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossHQSMS
+  remote_user: root
+  tasks:
+    - name: Start service Jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+

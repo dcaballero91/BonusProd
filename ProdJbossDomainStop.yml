@@ -1,0 +1,8 @@
+---
+- hosts: JBossDomain
+  remote_user: root
+  tasks:
+    - name: Stop service jboss
+      service:
+       name: jboss-eap-slave
+       state: stopped

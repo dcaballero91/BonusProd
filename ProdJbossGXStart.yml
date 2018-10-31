@@ -1,0 +1,6 @@
+---
+- hosts: ProdJbossGX 
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      shell: /etc/init.d/jboss-as-standalone start

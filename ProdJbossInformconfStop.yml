@@ -1,0 +1,8 @@
+---
+- hosts: JbossStandaloneInformconf
+  remote_user: root
+  tasks:
+    - name: Stop jboss service
+      service:
+       name: jboss-as-standalone
+       state: stopped

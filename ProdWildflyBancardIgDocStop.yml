@@ -1,0 +1,8 @@
+---
+- hosts: BancardIgdoc
+  remote_user: root
+  tasks:
+    - name: Stop service jboss
+      service:
+       name: wildfly-init-redhat
+       state: stopped

@@ -1,0 +1,8 @@
+---
+- hosts: BancardBonus
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: wildfly-init-redhat
+       state: started

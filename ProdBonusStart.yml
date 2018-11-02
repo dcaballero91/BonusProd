@@ -1,40 +1,230 @@
 ---
-- hosts: ContiJbossESBTRA
+- hosts: ProdJbossESBTRA
   remote_user: root
   tasks:
     - name: Start service jboss
       shell: /etc/init.d/jboss-eap-rhel start
       ignore_errors: True
-- hosts: ContiJbossGX
+- hosts: ProdJbossGX
   remote_user: root
   tasks:
     - name: Start service jboss
       shell: /etc/init.d/jboss-as-standalone start
       ignore_errors: True
-- hosts: ContiJbossArchivos
+- hosts: ProdJbossArchivos
   remote_user: root
   tasks:
     - name: Start service jboss
       shell: /etc/init.d/jboss-as-standalone start
       ignore_errors: True
-- hosts: ContiJbossBC
+- hosts: ProdJbossBC
   remote_user: root
   tasks:
     - name: Start service jboss
       shell: /etc/init.d/jboss-as-standalone start
       ignore_errors: True
-- hosts: ContiJbossTrans
+- hosts: ProdJbossTrans
   remote_user: root
   tasks:
     - name: Start service jboss
       shell: /etc/init.d/jboss-as-standalone start
       ignore_errors: True
-- hosts: ContiJbossWeb
+- hosts: ProdJbossWeb
   remote_user: root
   tasks:
     - name: Start service jboss
       shell: /etc/init.d/jboss-as-standalone start
       ignore_errors: True
+      
+ - hosts: JBossIgdoc
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-eap-slave
+       state: started
+---
+- hosts: JBossCaja
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-eap-slave
+       state: started
+---
+- hosts: JBossCNB
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-eap-slave
+       state: started
+---
+- hosts: JBossHbanking
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-eap-slave
+       state: started
+---
+- hosts: JBossJbvarios
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-eap-slave
+       state: started
+---
+- hosts: JBossBusbancard
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+sts: JbossStandaloneADMRest
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneFormalistica
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneInformconf
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneProforma
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+       name: jboss-eap-slave
+       state: started
+---
+- hosts: JbossStandalonePanel
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+---
+- hosts: JbossStandaloneBilletera
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneTauser 
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneTruncamiento
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneDepox
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneTelco
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandalone724
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JBossStandalone
+  remote_user: root
+  tasks:
+    - name: Start service Jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneToken
+  remote_user: root
+  tasks:
+    - name: Start jboss service
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneSms
+  remote_user: root
+  tasks:
+    - name: Start service Jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossHQSMS
+  remote_user: root
+  tasks:
+    - name: Start service Jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: JbossStandaloneLogin
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: jboss-as-standalone
+       state: started
+---
+- hosts: BancardIgdoc
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: wildfly-init-redhat
+       state: started
+---
+- hosts: BancardBonus
+  remote_user: root
+  tasks:
+    - name: Start service jboss
+      service:
+       name: wildfly-init-redhat
+       state: started   
 - hosts: localhost
   remote_user: root
   tasks:

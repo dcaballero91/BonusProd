@@ -239,4 +239,4 @@ sts: JbossStandaloneADMRest
       service:
        name: wildfly-init-redhat
        state: stopped
-       state: stopped
+       
